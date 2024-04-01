@@ -79,7 +79,9 @@ form select {
     margin-bottom: 5px; /* Reducción del margen inferior */
     box-sizing: border-box;
 }
-
+form label {
+    color: white; /* Color blanco para todos los labels */
+}
 form input[type="submit"] {
     background-color: black;
     color: #fff;
