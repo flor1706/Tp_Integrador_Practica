@@ -1,51 +1,110 @@
 /* Estilos generales */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
+
+* {
+    box-sizing: border-box;
+    text-decoration: none;
 }
 
-header {
+body {
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0 auto;
+    padding: 20px;
+    line-height: 1.6;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('./images/fondo.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
+}
+
+header, footer {
     background-color: #333;
     color: #fff;
-    padding: 10px 0;
+    padding: 10px;
+    text-align: center;
 }
 
 nav ul {
+    display: flex;
+    justify-content: space-evenly;
     list-style-type: none;
+    padding: 0;
+    font-size: 25px;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 nav ul li {
-    display: inline;
     margin-right: 20px;
+    position: relative;
 }
 
 nav ul li a {
-    color: #fff; /* Color blanco para el texto de los enlaces */
-    text-decoration: none; /* Quitar subrayado de los enlaces */
+    display: inline-block; /* Hace que el enlace ocupe todo el espacio del elemento li */
+    width: 100%; /* Hace que el enlace ocupe todo el ancho del elemento li */
+    padding: 0 50px; /* Añade un poco de espacio alrededor del texto */
+    color: #fff;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
 }
 
-h1 {
-    text-align: center;
-}
-h2 {
-    text-align: center;
+nav ul li a::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #ddd;
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all 0.3s ease-in-out 0s;
 }
 
-p{
-    text-align: center;
+nav ul li a:hover {
+    color: #ddd; /* Cambia el color del texto al pasar el ratón por encima */
+}
+
+nav ul li a:hover::before {
+    visibility: visible;
+    transform: scaleX(1);
+}
+
+nav ul li.active a {
+    color: #aaa; /* Resaltamos el enlace con otro color al estar activo */
 }
 
 section {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #f2f2f2;
+    text-shadow: 2px 2px 4px #000000;
     padding: 20px;
+    margin-bottom: 20px;
 }
 
-footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 10px 0;
+section h1, section h2 {
+    font-size: 40px;
+    padding-top: -50px;
 }
+
+section p {
+    font-size: 30px;
+    padding-bottom: 50px;
+}
+
+h1, h2, p {
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+}
+
 
 /* Estilos para el formulario de contacto */
 /* Estilos para el formulario de contacto */
@@ -117,21 +176,18 @@ form input[type="submit"] {
 }
 
 .container {
-    max-width: 800px; /* Ajusta el ancho máximo del contenedor según sea necesario */
-    margin: 0 auto; /* Centra el contenedor horizontalmente */
-    padding: 20px; /* Añade un poco de espacio alrededor del contenedor */    
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
 
-.row {
-    display: flex; /* Usa flexbox para organizar las columnas */
-    justify-content: center; /* Centra las columnas horizontalmente */
-    margin-bottom: 20px; /* Añade espacio entre las filas */
+.cuadricula img {
+    width: 100%;
+    object-fit: cover;
 }
 
-.column {
-    flex: 1; /* Permite que las columnas se expandan igualmente dentro de la fila */
-    margin: 0 10px; /* Añade espacio entre las columnas */
-}
+
 /* Estilos para medios responsivos */
 @media screen and (min-width: 768px) {
     /* Estilos para tablet */
