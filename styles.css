@@ -43,14 +43,12 @@ nav ul {
 }
 
 nav ul li {
+    display: inline;
     margin-right: 20px;
     position: relative;
 }
 
 nav ul li a {
-    display: inline-block; /* Hace que el enlace ocupe todo el espacio del elemento li */
-    width: 100%; /* Hace que el enlace ocupe todo el ancho del elemento li */
-    padding: 0 50px; /* Añade un poco de espacio alrededor del texto */
     color: #fff;
     text-decoration: none;
     transition: background-color 0.3s ease;
@@ -189,7 +187,19 @@ form input[type="submit"] {
 
 
 /* Estilos para medios responsivos */
+
+@media (max-width: 600px) {
+    nav ul {
+        flex-direction: column; 
+        align-items: center;
+    }
+    nav ul li {
+        margin-bottom: 10px;
+    }
+}
+
 @media screen and (min-width: 768px) {
+    flex-direction: column;
     /* Estilos para tablet */
 }
 
