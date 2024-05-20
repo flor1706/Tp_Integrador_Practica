@@ -24,7 +24,7 @@
     <main>
         <section id="contacto">
             <h2>Contacto</h2>
-            <form id="contactForm" action="#formulario.html" method="post">
+            <form id="contactForm" action="#formulario.html">
                 <div class="grid-container">
                     <label for="nombre">Nombre:</label>
                     <input type="text" id="nombre" name="nombre" required>
@@ -33,7 +33,7 @@
                     <input type="email" id="email" name="email" required>
 
                     <label for="telefono">Teléfono:</label>
-                    <input type="tel" id="telefono" name="telefono">
+                    <input type="number" id="telefono" name="telefono">
 
                     <label for="consulta">Consulta:</label>
                     <textarea id="consulta" name="consulta" rows="4" required></textarea>   
@@ -50,17 +50,29 @@
                     <label for="newsletter">Suscribirse al newsletter</label>
                 
                 </div>
+                <!-- <button type="submit">Enviar</button> -->
+
                 <input type="submit" value="Enviar">
             </form>
         </section>
     </main>
 
     <footer>
+        <div class="redes-sociales">
+            <!-- Enlace a Facebook -->
+            <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook"></i></a>
+            <!-- Enlace a Instagram -->
+            <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+            <!-- Enlace a Twitter -->
+            <a href="https://www.twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a>
+            <!-- Enlace a WhatsApp -->
+            <a href="https://api.whatsapp.com/" target="_blank"><i class="fab fa-whatsapp"></i></a>
+        </div>
         <p>&copy; 2024 Casa de Pastas. Todos los derechos reservados.</p>
     </footer>
 
     <!-- Script de Bootstrap -->
-    
+    <Script src="/script.js"></Script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
 </html>
