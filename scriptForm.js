@@ -3,10 +3,9 @@ var listaTestimonios = JSON.parse(sessionStorage.getItem("item"));
 mostrarItems(listaTestimonios);
 
 function mostrarItems(listaTestimonios) {
-    var contenidoItems = document.getElementsByClassName('testimonios');
+    var contenidoItems = document.querySelector('.testimonios');
 
     if (contenidoItems) {
-       
         listaTestimonios.forEach((listaT) => {
             var etiquetaItem = document.createElement('p');
             etiquetaItem.textContent = `"${listaT.consulta}" - ${listaT.nombre}`;
